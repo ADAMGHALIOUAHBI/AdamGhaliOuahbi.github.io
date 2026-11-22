@@ -91,9 +91,9 @@ by [`LICENSE`](./LICENSE).
 | 🦀 Rust | 12.5% | 2.0% | 1 | `.rs` | [Open](./starters/rust/README.md) |
 | 🐹 Go | 12.5% | 1.7% | 2 | `.go` | [Open](./starters/go/README.md) |
 | 🐍 Python | 12.5% | 4.0% | 4 | `.py` | [Open](./starters/python/README.md) |
-| 🔷 TypeScript | 12.5% | 64.2% | 24 | `.ts, .tsx` | [Open](./starters/typescript/README.md) |
+| 🔷 TypeScript | 12.5% | 64.3% | 24 | `.ts, .tsx` | [Open](./starters/typescript/README.md) |
 | ⚡ JavaScript | 12.5% | 1.7% | 4 | `.js, .mjs, .cjs` | [Open](./starters/javascript/README.md) |
 | 🗃️ SQL | 12.5% | 1.4% | 5 | `.sql` | [Open](./starters/sql/README.md) |
-| 🎨 CSS | 12.5% | 23.6% | 3 | `.css` | [Open](./starters/css/README.md) |
+| 🎨 CSS | 12.5% | 23.5% | 3 | `.css` | [Open](./starters/css/README.md) |
 | 🌐 HTML | 12.5% | 1.4% | 2 | `.html, .htm` | [Open](./starters/html/README.md) |
 <!-- language-metrics:end -->
