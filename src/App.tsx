@@ -22,6 +22,7 @@ import {
   X,
 } from 'lucide-react';
 import MusicPlayer from './components/MusicPlayer';
+import PwaInstallButton from './components/PwaInstallButton';
 import LanguageShowcase from './components/LanguageShowcase';
 import TimelineVideo from './components/TimelineVideo';
 import TimelinePage from './TimelinePage';
@@ -125,6 +126,10 @@ function EcoRightSidebar({
               {theme === 'dark' ? <Sun size={17} /> : <Moon size={17} />}
               <span>{theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}</span>
             </button>
+          </section>
+          <section className="settings-section">
+            <h3>Install this app</h3>
+            <PwaInstallButton />
           </section>
           <section className="settings-section">
             <h3>Your music</h3>
@@ -289,7 +294,7 @@ function EcoFooter({ onCloseSidebars }: { onCloseSidebars: () => void }) {
   }, []);
   return (
     <footer className="eco-footer" onClick={onCloseSidebars}>
-      <span className="footer-license">Ghali's World · family-managed · © {now.getFullYear()}</span>
+      <span className="footer-license">© @eco 2026 · Ghali's World · family-managed</span>
       <MusicPlayer />
       <a className="footer-github-link" href={REPOSITORIES_URL} target="_blank" rel="noreferrer" aria-label="View all GitHub repositories">
         <Github size={19} />

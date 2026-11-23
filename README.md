@@ -82,18 +82,28 @@ are included. Three.js, React Three Fiber, and Drei license notices are in
 [`THIRD_PARTY_NOTICES.md`](./THIRD_PARTY_NOTICES.md). Project source is covered
 by [`LICENSE`](./LICENSE).
 
+## Installable app and offline use
+
+On supported browsers, choose **Install this app** in Settings or use the
+browser's **Add to Home Screen** option. After the first online visit, the
+service worker caches the app shell and static assets; previously opened pages
+can then load offline. Music selected in the player is stored privately in
+that site's IndexedDB on the current device. Browsers with the File System
+Access API use its audio picker; other browsers keep the standard file picker.
+Push notifications need a backend and are not enabled yet.
+
 ## Language metrics
 
 
 <!-- language-metrics:start -->
 | Language | Equal starter share | Measured source share | Files | File types | Starter |
 |----------|---------------------|-----------------------|-------|------------|---------|
-| 🦀 Rust | 12.5% | 2.0% | 1 | `.rs` | [Open](./starters/rust/README.md) |
-| 🐹 Go | 12.5% | 1.7% | 2 | `.go` | [Open](./starters/go/README.md) |
-| 🐍 Python | 12.5% | 4.0% | 4 | `.py` | [Open](./starters/python/README.md) |
-| 🔷 TypeScript | 12.5% | 64.3% | 24 | `.ts, .tsx` | [Open](./starters/typescript/README.md) |
-| ⚡ JavaScript | 12.5% | 1.7% | 4 | `.js, .mjs, .cjs` | [Open](./starters/javascript/README.md) |
-| 🗃️ SQL | 12.5% | 1.4% | 5 | `.sql` | [Open](./starters/sql/README.md) |
-| 🎨 CSS | 12.5% | 23.5% | 3 | `.css` | [Open](./starters/css/README.md) |
-| 🌐 HTML | 12.5% | 1.4% | 2 | `.html, .htm` | [Open](./starters/html/README.md) |
+| 🦀 Rust | 12.5% | 1.6% | 1 | `.rs` | [Open](./starters/rust/README.md) |
+| 🐹 Go | 12.5% | 1.5% | 2 | `.go` | [Open](./starters/go/README.md) |
+| 🐍 Python | 12.5% | 3.3% | 4 | `.py` | [Open](./starters/python/README.md) |
+| 🔷 TypeScript | 12.5% | 61.1% | 25 | `.ts, .tsx` | [Open](./starters/typescript/README.md) |
+| ⚡ JavaScript | 12.5% | 1.5% | 4 | `.js, .mjs, .cjs` | [Open](./starters/javascript/README.md) |
+| 🗃️ SQL | 12.5% | 1.2% | 5 | `.sql` | [Open](./starters/sql/README.md) |
+| 🎨 CSS | 12.5% | 28.7% | 4 | `.css` | [Open](./starters/css/README.md) |
+| 🌐 HTML | 12.5% | 1.1% | 2 | `.html, .htm` | [Open](./starters/html/README.md) |
 <!-- language-metrics:end -->
