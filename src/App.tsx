@@ -23,6 +23,7 @@ import {
 } from 'lucide-react';
 import MusicPlayer from './components/MusicPlayer';
 import PwaInstallButton from './components/PwaInstallButton';
+import GitHubFollowButton from './components/GitHubFollowButton';
 import LanguageShowcase from './components/LanguageShowcase';
 import TimelineVideo from './components/TimelineVideo';
 import TimelinePage from './TimelinePage';
@@ -186,6 +187,7 @@ function HomePage() {
           <p className="hero-subtitle">A family-managed space for games, creative ideas, learning projects, and new discoveries.</p>
           <div className="hero-actions">
             <a className="primary-button" href="/timeline.html">Choose an adventure <ArrowUpRight size={16} /></a>
+            <GitHubFollowButton />
             <a className="secondary-button" href="/about.html">About this space <ArrowUpRight size={16} /></a>
           </div>
           <p className="hero-caption">Play · Create · Learn · Explore</p>

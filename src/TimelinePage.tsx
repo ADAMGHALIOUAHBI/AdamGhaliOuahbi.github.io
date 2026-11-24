@@ -1,3 +1,5 @@
+import MediaPlaceholderGallery from './components/MediaPlaceholderGallery';
+
 const adventures = [
   {
     label: 'MAKE',
@@ -40,6 +42,15 @@ export default function TimelinePage() {
             </article>
           ))}
         </div>
+      </section>
+
+      <section className="content-section" aria-labelledby="timeline-media-heading">
+        <div className="section-heading">
+          <span className="eyebrow">MEDIA PLACEHOLDERS</span>
+          <h2 id="timeline-media-heading">A space for future media.</h2>
+          <p>Photo, video, and media spaces are ready for future projects. Share only with family guidance.</p>
+        </div>
+        <MediaPlaceholderGallery />
       </section>
     </main>
   );
