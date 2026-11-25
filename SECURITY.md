@@ -1,28 +1,44 @@
 # Security and privacy
 
-This is a public, family-managed site for a young person. Do not publish an
-exact age, school, location, schedule, contact details, private media, or
-credentials.
+## Scope and ownership
 
-## Sign-in
+This public, family-managed website is maintained by
+[@ADAMGHALIOUAHBI](https://github.com/ADAMGHALIOUAHBI) as part of the ECO-SYS
+ecosystem. Keep a child's exact age, school, location, schedule, contact
+details, private media, and credentials out of public pages and repository
+content.
 
-The protected area uses GitHub OAuth. The API must be configured with
-`ALLOWED_GITHUB_LOGINS`; only those approved adult accounts may create or use a
-profile. The API stores a GitHub profile record and hashed session tokens, not
-GitHub access tokens. Keep OAuth client secrets and database credentials in
-the API host's environment.
+The static website is publicly readable. A hidden route, source file, or
+client-side check is not access control. Private data and protected actions
+must be checked by the API on every request.
 
-The frontend is static and publicly readable. Hiding a route or source file is
-not access control; private data must be checked by the API on every request.
+## Family account access
+
+The repository owner and guardian approve maintainers and accounts permitted
+to use protected family features. The API must enforce an exact
+`ALLOWED_GITHUB_LOGINS` allowlist server-side and deny access when it is
+missing, empty, or invalid. Never add a child's account to the allowlist.
+Possession of a valid GitHub account or access to the public repository is not
+approval.
+
+Keep GitHub OAuth secrets and database credentials only in the API host's
+environment or an ignored local `.env` file. Do not store GitHub access tokens
+in the database, browser storage, logs, or source control. Restrict OAuth,
+repository, database, and hosting permissions to approved adults who need
+them.
 
 ## Media and browser storage
 
-Only add media approved by a parent or guardian and licensed for publication.
-Visitor-selected music and saved playback preferences stay in that visitor's
-browser; the site does not upload them.
+Only publish media approved by a parent or guardian and licensed for use.
+Visitor-selected files and playback preferences remain in that visitor's
+browser; do not assume they are encrypted or uploaded by the site. Do not put
+private URLs or personal information in public profile fields or playlists.
 
-## Reporting a vulnerability
+## Vulnerability reporting
 
-Please use the repository's private vulnerability reporting feature when
-available. Do not publish exploit details, credentials, or personal
-information in a public issue.
+Do not publish details of an unpatched vulnerability in a public discussion.
+Use this repository's GitHub private vulnerability reporting when available.
+Otherwise, contact
+[@ADAMGHALIOUAHBI](https://github.com/ADAMGHALIOUAHBI) privately.
+Remove credentials, private links, and children's personal information from
+reports.
