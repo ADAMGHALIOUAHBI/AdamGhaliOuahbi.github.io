@@ -195,7 +195,11 @@ function HomePage() {
           <p className="hero-caption">Play · Create · Learn · Explore</p>
         </div>
       </section>
-      <ContributionWeekEmbed site="adamghaliouahbi" />
+      <ContributionWeekEmbed
+        site="adamghaliouahbi"
+        repository="ADAMGHALIOUAHBI/AdamGhaliOuahbi.github.io"
+        branch="main"
+      />
       {isAvatarOpen && (
         <div
           className="avatar-lightbox"
