@@ -60,18 +60,16 @@ function EcoHeader({
         <button className="icon-button toggle-button" type="button" onClick={onToggleLeft} aria-label="Toggle navigation" aria-expanded={leftOpen} title="Toggle navigation (Ctrl+B)">
           {leftOpen ? <PanelLeftClose size={19} /> : <PanelLeftOpen size={19} />}
         </button>
-        <a className="brand" href="/" aria-label="Ghali's World home"><span className="brand-mark">GW</span><span className="brand-label">Ghali's World</span></a>
+        <a className="brand" href="/" aria-label="Ghali's World home"><span className="brand-mark">ECO</span><span className="brand-label">Ghali's World</span></a>
         <nav className="header-nav" aria-label="Main navigation">
           <a href="/">Home</a>
           <a href="/about.html">About</a>
           <a href="/timeline.html">Timeline</a>
-          <a href="/#languages">Languages</a>
-          <a href={PUBLIC_PLAYLIST.length ? '/#listen' : '/#listen-section'}>Listen</a>
         </nav>
       </div>
       <div className="header-side header-side-right">
-        <a className="header-link github-link" href={REPOSITORIES_URL} target="_blank" rel="noreferrer" aria-label="View all repositories on GitHub"><Github size={16} /><span>Repositories</span></a>
-        <a className="icon-button toggle-button" href={SOURCE_URL} target="_blank" rel="noreferrer" aria-label="Open the family-managed GitHub profile" title="Family-managed GitHub profile"><ArrowUpRight size={18} /></a>
+        <a className="header-link github-link" href={REPOSITORIES_URL} target="_blank" rel="noreferrer" aria-label="View all repositories on GitHub"><Github size={16} /><span>Git repo</span></a>
+        <a className="header-link github-link" href="https://github.com/simoouahbiGHALINOA/HYPERSCALE-ecosystem" target="_blank" rel="noreferrer" aria-label="Open the ECO ecosystem repository" title="ECO repository"><span className="brand-mark" aria-hidden="true">ECO</span><span>ECO repo</span></a>
         <a className="icon-button toggle-button" href={PROTECTED_USERS_URL} aria-label="Open family access" title="Family access"><UserPlus size={19} /></a>
         <button className="icon-button toggle-button right-toggle" type="button" onClick={onToggleRight} aria-label="Toggle right sidebar" aria-expanded={rightOpen} title="Toggle right sidebar (Ctrl+M)">
           {rightOpen ? <PanelRightClose size={19} /> : <PanelRightOpen size={19} />}
@@ -190,7 +188,10 @@ function HomePage() {
             <a className="primary-button" href="/timeline.html">Choose an adventure <ArrowUpRight size={16} /></a>
             <GitHubFollowButton />
             <a className="secondary-button" href="/about.html">About this space <ArrowUpRight size={16} /></a>
-            <a className="secondary-button" href="#listen"><AudioLines size={16} /> Listen with me</a>
+            <a className="secondary-button" href="#listen" onClick={(event) => {
+              event.preventDefault();
+              window.dispatchEvent(new Event('eco:open-music-library'));
+            }}><AudioLines size={16} /> Listen with me</a>
           </div>
           <p className="hero-caption">Play · Create · Learn · Explore</p>
         </div>
