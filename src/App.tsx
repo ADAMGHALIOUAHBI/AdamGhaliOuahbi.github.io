@@ -170,7 +170,7 @@ function HomePage() {
         <div className="hero-content">
           <p className="eyebrow">GAMES · CREATIVITY · LEARNING · DISCOVERY</p>
           <div className="hero-heading-row">
-            <h1>Welcome to <span>Ghali's World.</span><br />Let's <span className="gradient-text">explore!</span></h1>
+            <h1>Hi, I’m <span>Ghali.</span><br /><span className="gradient-text">Let’s explore.</span></h1>
             <button
               className="hero-avatar-button"
               type="button"
@@ -189,6 +189,7 @@ function HomePage() {
             <a className="primary-button" href="/timeline.html">Choose an adventure <ArrowUpRight size={16} /></a>
             <GitHubFollowButton />
             <a className="secondary-button" href="/about.html">About this space <ArrowUpRight size={16} /></a>
+            <a className="secondary-button" href="#listen"><AudioLines size={16} /> Listen with me</a>
           </div>
           <p className="hero-caption">Play · Create · Learn · Explore</p>
         </div>
