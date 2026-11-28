@@ -22,6 +22,7 @@ import {
   X,
 } from 'lucide-react';
 import MusicPlayer from './components/MusicPlayer';
+import ContributionWeekEmbed from './components/ContributionWeekEmbed';
 import PwaInstallButton from './components/PwaInstallButton';
 import GitHubFollowButton from './components/GitHubFollowButton';
 import LanguageShowcase from './components/LanguageShowcase';
@@ -194,6 +195,7 @@ function HomePage() {
           <p className="hero-caption">Play · Create · Learn · Explore</p>
         </div>
       </section>
+      <ContributionWeekEmbed site="adamghaliouahbi" />
       {isAvatarOpen && (
         <div
           className="avatar-lightbox"
