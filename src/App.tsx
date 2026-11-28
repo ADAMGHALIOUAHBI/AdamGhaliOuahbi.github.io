@@ -38,6 +38,15 @@ const REPOSITORIES_URL = `${PROFILE_URL}?tab=repositories`;
 const PROTECTED_USERS_URL = '/protectedUSERS_root_path_secure/';
 const SOURCE_URL = PROFILE_URL;
 
+function ThemeModeIcon({ className = '' }: { className?: string }) {
+  return (
+    <>
+      <img className={`brand-mode-icon brand-logo-dark ${className}`} src="/icons/LOGOO-outline-avatar-white.png" alt="" aria-hidden="true" />
+      <img className={`brand-mode-icon brand-logo-light ${className}`} src="/icons/LOGOO-outline-avatar-black.png" alt="" aria-hidden="true" />
+    </>
+  );
+}
+
 function EcoHeader({
   leftOpen,
   rightOpen,
@@ -60,7 +69,7 @@ function EcoHeader({
         <button className="icon-button toggle-button" type="button" onClick={onToggleLeft} aria-label="Toggle navigation" aria-expanded={leftOpen} title="Toggle navigation (Ctrl+B)">
           {leftOpen ? <PanelLeftClose size={19} /> : <PanelLeftOpen size={19} />}
         </button>
-        <a className="brand" href="/" aria-label="Ghali's World home"><span className="brand-mark">ECO</span><span className="brand-label">Ghali's World</span></a>
+        <a className="brand" href="/" aria-label="Ghali's World home"><span className="brand-mark" aria-hidden="true"><img className="brand-micro-icon" src="/icons/LOGOO-outline-avatar-micro-gold.png" alt="" /></span><span className="brand-label">ECO</span></a>
         <nav className="header-nav" aria-label="Main navigation">
           <a href="/">Home</a>
           <a href="/about.html">About</a>
@@ -68,8 +77,8 @@ function EcoHeader({
         </nav>
       </div>
       <div className="header-side header-side-right">
-        <a className="header-link github-link" href={REPOSITORIES_URL} target="_blank" rel="noreferrer" aria-label="View all repositories on GitHub"><Github size={16} /><span>Git repo</span></a>
-        <a className="header-link github-link" href="https://github.com/simoouahbiGHALINOA/HYPERSCALE-ecosystem" target="_blank" rel="noreferrer" aria-label="Open the ECO ecosystem repository" title="ECO repository"><span className="brand-mark" aria-hidden="true">ECO</span><span>ECO repo</span></a>
+        <a className="header-link github-link repositories-link" href={REPOSITORIES_URL} target="_blank" rel="noreferrer" aria-label="View all repositories on GitHub"><Github size={16} /><span className="repository-label">Git repo</span></a>
+        <a className="header-link github-link" href="https://github.com/simoouahbiGHALINOA/HYPERSCALE-ecosystem" target="_blank" rel="noreferrer" aria-label="Open the ECO ecosystem repository" title="ECO repository"><span className="brand-mark" aria-hidden="true"><img className="brand-micro-icon" src="/icons/LOGOO-outline-avatar-micro-gold.png" alt="" /></span><span className="repo-badge">repo</span></a>
         <a className="icon-button toggle-button" href={PROTECTED_USERS_URL} aria-label="Open family access" title="Family access"><UserPlus size={19} /></a>
         <button className="icon-button toggle-button right-toggle" type="button" onClick={onToggleRight} aria-label="Toggle right sidebar" aria-expanded={rightOpen} title="Toggle right sidebar (Ctrl+M)">
           {rightOpen ? <PanelRightClose size={19} /> : <PanelRightOpen size={19} />}
@@ -185,7 +194,7 @@ function HomePage() {
           </div>
           <p className="hero-subtitle">A family-managed space for games, creative ideas, learning projects, and new discoveries.</p>
           <div className="hero-actions">
-            <a className="primary-button" href="/timeline.html">Choose an adventure <ArrowUpRight size={16} /></a>
+            <a className="primary-button logo-button" href="/timeline.html"><ThemeModeIcon /> Choose an adventure <ArrowUpRight size={16} /></a>
             <GitHubFollowButton />
             <a className="secondary-button" href="/about.html">About this space <ArrowUpRight size={16} /></a>
             <a className="secondary-button" href="#listen" onClick={(event) => {
@@ -260,6 +269,10 @@ function HomePage() {
       <section className="content-section source-section" id="privacy">
         <div><span className="eyebrow">A SAFE SPACE</span><h2>Privacy comes first.</h2><p>This page is managed by family. It does not publish an exact age, school, location, daily routine, or direct contact details.</p></div>
         <a className="secondary-button" href="/about.html#privacy">Read the safety notes <ArrowUpRight size={15} /></a>
+      </section>
+      <section className="content-section source-section" id="eco-projects">
+        <div><span className="eyebrow">ECO PROJECTS</span><h2>Explore the wider ecosystem.</h2><p>Browse the public source for the tools and projects behind ECO.</p></div>
+        <a className="secondary-button logo-button" href="https://github.com/simoouahbiGHALINOA/HYPERSCALE-ecosystem" target="_blank" rel="noreferrer"><ThemeModeIcon /> View ECO Projects <ArrowUpRight size={15} /></a>
       </section>
     </main>
   );
